@@ -6,11 +6,12 @@
 <title>Internal • Jacob Rubis — Promotion Case</title>
 <meta name="description" content="Internal portfolio for promotion case at ServiceNow: enablement impact, AI projects, and rationale for outbound." />
 <style>
-/* ===== ServiceNow‑inspired premium theme ===== */
 :root{
-  --bg:#071a24; --bg2:#071520; --panel:#0b2431; --panel2:#09202a;
-  --muted:#a8c0d4; --text:#e9f3fb; --brand:#7cf29b; --brand-2:#8dd4ff; --border:#12384a;
-  --radius:18px; --shadow:0 22px 60px rgba(0,0,0,.45); --max:1200px;
+  --bg:#0e3a4f; --bg2:#0b2f43;
+  --panel:#0f415a; --panel2:#0e3a52;
+  --muted:#bed5e4; --text:#f1fbff;
+  --brand:#79f2a6; --brand-2:#8fd8ff; --border:#155674;
+  --radius:20px; --shadow:0 24px 60px rgba(0,0,0,.35); --max:1200px;
 }
 *{box-sizing:border-box}
 html,body{height:100%}
@@ -18,8 +19,8 @@ body{
   margin:0; color:var(--text);
   font:16px/1.6 Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
   background:
-    radial-gradient(1200px 600px at 85% -10%, rgba(141,212,255,.10), transparent 60%),
-    radial-gradient(900px 500px at -10% 10%, rgba(124,242,155,.08), transparent 60%),
+    radial-gradient(1200px 600px at 85% -10%, rgba(141,212,255,.18), transparent 60%),
+    radial-gradient(900px 500px at -10% 10%, rgba(124,242,155,.14), transparent 60%),
     linear-gradient(180deg, var(--bg), var(--bg2));
   background-size:200% 200%; animation:bgmove 24s linear infinite;
   overflow-x:hidden;
@@ -32,10 +33,10 @@ a{color:var(--brand); text-decoration:none}
 
 /* Header */
 header{position:sticky; top:0; z-index:60; border-bottom:1px solid var(--border);
-  background:linear-gradient(to bottom, rgba(7,24,36,.92), rgba(7,24,36,.55)); backdrop-filter:saturate(140%) blur(10px)}
+  background:linear-gradient(to bottom, rgba(16,60,82,.92), rgba(16,60,82,.55)); backdrop-filter:saturate(140%) blur(10px)}
 .nav{display:flex; align-items:center; justify-content:space-between; gap:16px; max-width:var(--max); margin:0 auto; padding:12px 24px}
 .nav a{padding:10px 12px; border-radius:12px; color:var(--text); transition:transform .18s ease, background .18s ease}
-.nav a:hover{transform:translateY(-2px); background:rgba(255,255,255,.06)}
+.nav a:hover{transform:translateY(-2px); background:rgba(255,255,255,.08)}
 .pill{display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border-radius:999px; background:rgba(124,242,155,.14); color:#042c1b; font-weight:800}
 .progress{height:3px; background:linear-gradient(90deg,var(--brand),var(--brand-2)); transform-origin:0 50%; transform:scaleX(0)}
 
@@ -54,7 +55,7 @@ h2{font-size:26px; margin:0 0 8px}
 /* Animated banners + reveals */
 .section{position:relative; overflow:hidden; margin-top:28px}
 .banner{position:absolute; left:0; right:0; height:130px; top:-34px; border-radius:28px; opacity:0;
-  background:conic-gradient(from 180deg at 10% 50%, rgba(124,242,155,.12), rgba(141,212,255,.12), rgba(124,242,155,.12));
+  background:conic-gradient(from 180deg at 10% 50%, rgba(124,242,155,.16), rgba(141,212,255,.16), rgba(124,242,155,.16));
   transform:translateY(60px) scale(.97) skewX(-6deg); will-change:transform,opacity}
 .section.show .banner{opacity:.95}
 .reveal{opacity:0; transform:translateY(22px); transition:opacity .7s ease, transform .7s ease}
@@ -72,7 +73,7 @@ h2{font-size:26px; margin:0 0 8px}
 /* Tiles / projects */
 .grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px}
 @media (max-width:980px){.grid{grid-template-columns:1fr}}
-.tile{position:relative; padding:18px; border:1px solid var(--border); border-radius:16px; overflow:hidden; background:rgba(255,255,255,.02); transition:transform .18s ease, box-shadow .18s ease}
+.tile{position:relative; padding:18px; border:1px solid var(--border); border-radius:16px; overflow:hidden; background:rgba(255,255,255,.05); transition:transform .18s ease, box-shadow .18s ease}
 .tile:hover{transform:translateY(-4px); box-shadow:0 18px 40px rgba(0,0,0,.35)}
 .tile:before{content:""; position:absolute; inset:auto -30% -40% auto; width:160px; height:160px; background:radial-gradient(closest-side, rgba(124,242,155,.18), transparent 70%)}
 .badges{display:flex; flex-wrap:wrap; gap:8px; margin-top:8px}
@@ -80,27 +81,22 @@ h2{font-size:26px; margin:0 0 8px}
 
 /* KPIs */
 .kpis{display:grid; grid-template-columns:repeat(2,1fr); gap:18px; margin-top:10px}
-.kpi{padding:16px; border:1px solid var(--border); border-radius:14px; text-align:center; background:rgba(255,255,255,.02)}
+.kpi{padding:16px; border:1px solid var(--border); border-radius:14px; text-align:center; background:rgba(255,255,255,.05)}
 .kpi strong{font-size:32px; display:block}
 
-/* Star (ServiceNow‑ish) */
+/* Star */
 .star{position:absolute; right:16px; top:16px; width:64px; height:64px; opacity:.7; filter:drop-shadow(0 10px 20px rgba(0,0,0,.25))}
 .star svg{width:100%; height:100%; animation:float 6s ease-in-out infinite}
 @keyframes float{0%{transform:translateY(0)}50%{transform:translateY(-6px)}100%{transform:translateY(0)}}
 
-/* Particles + blob + spotlight */
+/* Particles + spotlight */
 canvas.bg{position:fixed; inset:0; pointer-events:none; z-index:0; opacity:.55}
-.blob{position:absolute; right:-120px; top:-80px; width:460px; height:460px; z-index:0; filter:blur(22px) saturate(130%);
-  background:radial-gradient(45% 45% at 50% 50%, rgba(141,212,255,.35), rgba(124,242,155,.25));
-  animation:blob 14s ease-in-out infinite alternate; border-radius:42% 58% 63% 37%/44% 39% 61% 56%}
-@keyframes blob{0%{transform:translate3d(0,0,0) rotate(0deg)}100%{transform:translate3d(-30px,18px,0) rotate(8deg)}}
-.spotlight{position:fixed; inset:0; pointer-events:none; z-index:1; background:radial-gradient(200px 200px at var(--mx,60%) var(--my,20%), rgba(255,255,255,.08), transparent 60%)}
+.spotlight{position:fixed; inset:0; pointer-events:none; z-index:1; background:radial-gradient(200px 200px at var(--mx,60%) var(--my,20%), rgba(255,255,255,.10), transparent 60%)}
 
 /* Utilities */
 .hr{height:1px; background:var(--border); margin:12px 0}
 footer{color:var(--muted); text-align:center; padding:40px 0}
 
-/* Reduced motion */
 @media (prefers-reduced-motion:reduce){
   *{animation:none!important; transition:none!important}
 }
@@ -112,7 +108,10 @@ footer{color:var(--muted); text-align:center; padding:40px 0}
 
 <header>
   <div class="nav">
-    <div class="pill">Internal • ServiceNow • <span id="updated"></span></div>
+    <div style="display:flex; align-items:center; gap:12px;">
+      <div class="pill">Internal • ServiceNow • <span id="updated"></span></div>
+      <a href="index.html" style="font-weight:800; color:#072e21; background:linear-gradient(135deg,var(--brand),var(--brand-2)); padding:8px 12px; border-radius:12px;">← Home</a>
+    </div>
     <nav>
       <a href="#projects">AI Projects</a>
       <a href="#whyme">Why Me</a>
@@ -127,13 +126,12 @@ footer{color:var(--muted); text-align:center; padding:40px 0}
   <section class="hero section show" id="top">
     <div class="banner parallax" aria-hidden="true"></div>
     <div class="card pad tilt" style="position:relative; overflow:hidden">
-      <div class="blob" aria-hidden="true"></div>
       <div class="star" aria-hidden="true">
         <svg viewBox="0 0 100 100" fill="url(#g)">
           <defs>
             <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
-              <stop offset="0%" stop-color="#7cf29b"/>
-              <stop offset="100%" stop-color="#8dd4ff"/>
+              <stop offset="0%" stop-color="#79f2a6"/>
+              <stop offset="100%" stop-color="#8fd8ff"/>
             </linearGradient>
           </defs>
           <path d="M50 5 L60 40 L95 50 L60 60 L50 95 L40 60 L5 50 L40 40 Z"/>
@@ -153,9 +151,9 @@ footer{color:var(--muted); text-align:center; padding:40px 0}
     <aside class="card pad reveal" id="tldr">
       <h2>Promotion Case — TL;DR</h2>
       <ul class="list">
-        <li>Proven across <strong>Mid‑Market, Commercial, and Enterprise</strong>; I’ve covered all 3 segments.</li>
+        <li>Proven across <strong>Mid-Market, Commercial, and Enterprise</strong>; I’ve covered all 3 segments.</li>
         <li>Last 2 quarters: among the higher attainers on my team; most recently exceeded number in a tough Canada Commercial & Enterprise patch.</li>
-        <li>Process‑first; enablement impact beyond my role—tools others use daily.</li>
+        <li>Process-first; enablement impact beyond my role—tools others use daily.</li>
         <li>Coachable, curious, and quick to implement feedback to improve outcomes.</li>
         <li>I aim to improve the team’s success rate, not just my own.</li>
       </ul>
@@ -164,221 +162,209 @@ footer{color:var(--muted); text-align:center; padding:40px 0}
     </aside>
   </section>
 
+  <!-- PROJECTS -->
+  <section id="projects" class="section reveal card pad">
+    <div class="banner parallax"></div>
+    <h2>AI Projects</h2>
 
-  
-<!-- PROJECTS -->
-<section id="projects" class="section reveal card pad">
-  <div class="banner parallax"></div>
-  <h2>AI Projects</h2>
+    <style>
+      #projects .grid { grid-template-columns: repeat(4, 1fr); }
+      @media (max-width: 980px){ #projects .grid { grid-template-columns: 1fr; } }
+    </style>
 
-  <!-- 4 columns on desktop; 1 on mobile -->
-  <style>
-    #projects .grid { grid-template-columns: repeat(4, 1fr); }
-    @media (max-width: 980px){ #projects .grid { grid-template-columns: 1fr; } }
-  </style>
-
-  <div class="grid">
-
-    <div class="tile" style="display:flex; flex-direction:column;">
-      <strong>iSDR One-Off Email GPT</strong>
-      <p class="muted">Creates tailored, credible cold or warm emails fast from verifiable inputs.</p>
-      <a href="https://chatgpt.com/g/g-685c3088b178819196ae6580d95b5dca-isdr-one-off-emails" target="_blank" rel="noopener"
-         style="display:inline-block; align-self:center; margin-top:auto; padding:8px 12px; border-radius:10px; font-weight:800; background:linear-gradient(135deg,var(--brand),var(--brand-2)); color:#072e21">
-        Try Here!
-      </a>
-    </div>
-
-    <div class="tile" style="display:flex; flex-direction:column;">
-      <strong>Roleplay Trainer GPT</strong>
-      <p class="muted">Mock discovery and objection handling with positive feedback from an ITOM SC; actively used by one commercial outbound team.</p>
-      <a href="https://chatgpt.com/g/g-68125d8938688191b90c1a4fe796cf90-roleplay-trainer" target="_blank" rel="noopener"
-         style="display:inline-block; align-self:center; margin-top:auto; padding:8px 12px; border-radius:10px; font-weight:800; background:linear-gradient(135deg,var(--brand),var(--brand-2)); color:#072e21">
-        Try Here!
-      </a>
-    </div>
-
-    <div class="tile" style="display:flex; flex-direction:column;">
-      <strong>Industry Intel GPT</strong>
-      <p class="muted">Generates a concise sales brief to drive outreach topics and support account plan building.</p>
-      <a href="https://chatgpt.com/g/g-684b5838c454819182b4c33794dcf594-industry-intel" target="_blank" rel="noopener"
-         style="display:inline-block; align-self:center; margin-top:auto; padding:8px 12px; border-radius:10px; font-weight:800; background:linear-gradient(135deg,var(--brand),var(--brand-2)); color:#072e21">
-        Try Here!
-      </a>
-    </div>
-
-    <div class="tile" style="display:flex; flex-direction:column;">
-      <strong>Post Disco Call Follow Up</strong>
-      <p class="muted">Converts discovery notes into a structured SPICED summary and client ready follow up, standardizing workflows, aligning teams, and reinforcing value and urgency post call.</p>
-      <a href="https://chatgpt.com/g/g-689f6b07cf9c8191b2ebf0ad42ce82fb-post-disco-follow-up" target="_blank" rel="noopener"
-         style="display:inline-block; align-self:center; margin-top:auto; padding:8px 12px; border-radius:10px; font-weight:800; background:linear-gradient(135deg,var(--brand),var(--brand-2)); color:#072e21">
-        Try Here!
-      </a>
-    </div>
-
-    <div class="tile" style="display:flex; flex-direction:column;">
-      <strong>Pre Call Briefing</strong>
-      <p class="muted">Turns scattered research and notes into a standardized briefing with key players, context, pains, and goals to save prep time and boost team alignment.</p>
-      <a href="https://chatgpt.com/g/g-689e3bda5b04819192404137f2355b7d-pre-call-briefing" target="_blank" rel="noopener"
-         style="display:inline-block; align-self:center; margin-top:auto; padding:8px 12px; border-radius:10px; font-weight:800; background:linear-gradient(135deg,var(--brand),var(--brand-2)); color:#072e21">
-        Try Here!
-      </a>
-    </div>
-
-    <!-- Talk Tracks moved up and relabeled -->
-    <div class="tile" style="display:flex; flex-direction:column;">
-      <strong>Talk Tracks Library</strong>
-      <p class="muted">Short scripts per business area to help new reps ramp fast.</p>
-      <div class="small muted" style="margin-top:auto; align-self:center;">OneNote resource</div>
-    </div>
-
-    <div class="tile" style="display:flex; flex-direction:column;">
-      <strong>Account Plan GPT</strong>
-      <p class="muted">Turns public signals into an action oriented plan aligned to buyers.</p>
-      <div class="small muted" style="margin-top:auto; align-self:center;">Coming soon</div>
-    </div>
-
-    <div class="tile" style="display:flex; flex-direction:column;">
-      <strong>Persona Based Sequence Creator</strong>
-      <p class="muted">Aligns to persona based messaging per CMO guidance.</p>
-      <div class="small muted" style="margin-top:auto; align-self:center;">Coming soon</div>
-    </div>
-
-  </div>
-</section>
-
-
-
-
-
-<!-- WHY ME (no arrows; centered numbered badges; click-to-reveal) -->
-<section id="whyme" class="section reveal card pad" style="border:1px solid var(--brand)">
-  <div class="banner parallax"></div>
-  <h2>Why Me</h2>
-
-  <div class="grid">
-    <!-- 1 -->
-    <div class="tile">
-      <div role="button" tabindex="0" aria-controls="why1" aria-expanded="false" style="text-align:center; cursor:pointer"
-           onclick="const c=this.nextElementSibling; const o=(c.style.display!=='block'); c.style.display=o?'block':'none'; this.setAttribute('aria-expanded',o)">
-        <span class="badge" style="display:inline-flex;justify-content:center;align-items:center;width:72px;height:72px;border-radius:999px;font-weight:800;font-size:24px;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#072e21;border-color:transparent;">01</span>
-        <div style="font-size:22px;font-weight:800;margin-top:10px">Proven Performance</div>
-        <div class="small muted" style="margin-top:6px">Read more</div>
+    <div class="grid">
+      <div class="tile" style="display:flex; flex-direction:column;">
+        <strong>iSDR One-Off Email GPT</strong>
+        <p class="muted">Creates tailored, credible cold or warm emails fast from verifiable inputs.</p>
+        <a href="https://chatgpt.com/g/g-685c3088b178819196ae6580d95b5dca-isdr-one-off-emails" target="_blank" rel="noopener"
+           style="display:inline-block; align-self:center; margin-top:auto; padding:8px 12px; border-radius:10px; font-weight:800; background:linear-gradient(135deg,var(--brand),var(--brand-2)); color:#072e21">
+          Try Here!
+        </a>
       </div>
-      <div id="why1" style="display:none">
-        <ul class="list">
-          <li>Consistently strong results across Mid Market, Commercial, and Enterprise.</li>
-          <li>Among the higher attainers for the last two quarters, most recently exceeding target in a challenging Canada Commercial and Enterprise patch.</li>
-          <li>Outcome driven: other reps have booked multiple meetings using my email templates and tools.</li>
-        </ul>
-      </div>
-    </div>
 
-    <!-- 2 -->
-    <div class="tile">
-      <div role="button" tabindex="0" aria-controls="why2" aria-expanded="false" style="text-align:center; cursor:pointer"
-           onclick="const c=this.nextElementSibling; const o=(c.style.display!=='block'); c.style.display=o?'block':'none'; this.setAttribute('aria-expanded',o)">
-        <span class="badge" style="display:inline-flex;justify-content:center;align-items:center;width:72px;height:72px;border-radius:999px;font-weight:800;font-size:24px;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#072e21;border-color:transparent;">02</span>
-        <div style="font-size:22px;font-weight:800;margin-top:10px">Team Impact and Enablement</div>
-        <div class="small muted" style="margin-top:6px">Read more</div>
+      <div class="tile" style="display:flex; flex-direction:column;">
+        <strong>Roleplay Trainer GPT</strong>
+        <p class="muted">Mock discovery and objection handling with positive feedback from an ITOM SC; actively used by one commercial outbound team.</p>
+        <a href="https://chatgpt.com/g/g-68125d8938688191b90c1a4fe796cf90-roleplay-trainer" target="_blank" rel="noopener"
+           style="display:inline-block; align-self:center; margin-top:auto; padding:8px 12px; border-radius:10px; font-weight:800; background:linear-gradient(135deg,var(--brand),var(--brand-2)); color:#072e21">
+          Try Here!
+        </a>
       </div>
-      <div id="why2" style="display:none">
-        <ul class="list">
-          <li>Go to for AI questions, providing quick, actionable help that improves win rates.</li>
-          <li>Build enablement through talk tracks, repeatable workflows, and AI tools adopted by peers.</li>
-          <li>Contribute to team success with slides, docs, and product storytelling for the AI Listening Tour.</li>
-        </ul>
-      </div>
-    </div>
 
-    <!-- 3 -->
-    <div class="tile">
-      <div role="button" tabindex="0" aria-controls="why3" aria-expanded="false" style="text-align:center; cursor:pointer"
-           onclick="const c=this.nextElementSibling; const o=(c.style.display!=='block'); c.style.display=o?'block':'none'; this.setAttribute('aria-expanded',o)">
-        <span class="badge" style="display:inline-flex;justify-content:center;align-items:center;width:72px;height:72px;border-radius:999px;font-weight:800;font-size:24px;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#072e21;border-color:transparent;">03</span>
-        <div style="font-size:22px;font-weight:800;margin-top:10px">Mindset and Collaboration</div>
-        <div class="small muted" style="margin-top:6px">Read more</div>
+      <div class="tile" style="display:flex; flex-direction:column;">
+        <strong>Industry Intel GPT</strong>
+        <p class="muted">Generates a concise sales brief to drive outreach topics and support account plan building.</p>
+        <a href="https://chatgpt.com/g/g-684b5838c454819182b4c33794dcf594-industry-intel" target="_blank" rel="noopener"
+           style="display:inline-block; align-self:center; margin-top:auto; padding:8px 12px; border-radius:10px; font-weight:800; background:linear-gradient(135deg,var(--brand),var(--brand-2)); color:#072e21">
+          Try Here!
+        </a>
       </div>
-      <div id="why3" style="display:none">
-        <ul class="list">
-          <li>Regularly join pitches with clear, concise storytelling.</li>
-          <li>Coachable, curious, and focused on measurable improvements.</li>
-          <li>Known for strong collaboration and communication that accelerates team performance.</li>
-        </ul>
+
+      <div class="tile" style="display:flex; flex-direction:column;">
+        <strong>Post Disco Call Follow Up</strong>
+        <p class="muted">Converts discovery notes into a structured SPICED summary and client ready follow up, standardizing workflows, aligning teams, and reinforcing value and urgency post call.</p>
+        <a href="https://chatgpt.com/g/g-689f6b07cf9c8191b2ebf0ad42ce82fb-post-disco-follow-up" target="_blank" rel="noopener"
+           style="display:inline-block; align-self:center; margin-top:auto; padding:8px 12px; border-radius:10px; font-weight:800; background:linear-gradient(135deg,var(--brand),var(--brand-2)); color:#072e21">
+          Try Here!
+        </a>
+      </div>
+
+      <div class="tile" style="display:flex; flex-direction:column;">
+        <strong>Pre Call Briefing</strong>
+        <p class="muted">Turns scattered research and notes into a standardized briefing with key players, context, pains, and goals to save prep time and boost team alignment.</p>
+        <a href="https://chatgpt.com/g/g-689e3bda5b04819192404137f2355b7d-pre-call-briefing" target="_blank" rel="noopener"
+           style="display:inline-block; align-self:center; margin-top:auto; padding:8px 12px; border-radius:10px; font-weight:800; background:linear-gradient(135deg,var(--brand),var(--brand-2)); color:#072e21">
+          Try Here!
+        </a>
+      </div>
+
+      <div class="tile" style="display:flex; flex-direction:column;">
+        <strong>Talk Tracks Library</strong>
+        <p class="muted">Short scripts per business area to help new reps ramp fast.</p>
+        <div class="small muted" style="margin-top:auto; align-self:center;">OneNote resource</div>
+      </div>
+
+      <div class="tile" style="display:flex; flex-direction:column;">
+        <strong>Account Plan GPT</strong>
+        <p class="muted">Turns public signals into an action oriented plan aligned to buyers.</p>
+        <div class="small muted" style="margin-top:auto; align-self:center;">Coming soon</div>
+      </div>
+
+      <div class="tile" style="display:flex; flex-direction:column;">
+        <strong>Persona Based Sequence Creator</strong>
+        <p class="muted">Aligns to persona based messaging per CMO guidance.</p>
+        <div class="small muted" style="margin-top:auto; align-self:center;">Coming soon</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WHY ME -->
+  <section id="whyme" class="section reveal card pad" style="border:1px solid var(--brand)">
+    <div class="banner parallax"></div>
+    <h2>Why Me</h2>
+
+    <div class="grid">
+      <div class="tile">
+        <div role="button" tabindex="0" aria-controls="why1" aria-expanded="false" style="text-align:center; cursor:pointer"
+             onclick="const c=this.nextElementSibling; const o=(c.style.display!=='block'); c.style.display=o?'block':'none'; this.setAttribute('aria-expanded',o)">
+          <span class="badge" style="display:inline-flex;justify-content:center;align-items:center;width:72px;height:72px;border-radius:999px;font-weight:800;font-size:24px;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#072e21;border-color:transparent;">01</span>
+          <div style="font-size:22px;font-weight:800;margin-top:10px">Proven Performance</div>
+          <div class="small muted" style="margin-top:6px">Read more</div>
+        </div>
+        <div id="why1" style="display:none">
+          <ul class="list">
+            <li>Consistently strong results across Mid Market, Commercial, and Enterprise.</li>
+            <li>Among the higher attainers for the last two quarters, most recently exceeding target in a challenging Canada Commercial and Enterprise patch.</li>
+            <li>Outcome driven: other reps have booked multiple meetings using my email templates and tools.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tile">
+        <div role="button" tabindex="0" aria-controls="why2" aria-expanded="false" style="text-align:center; cursor:pointer"
+             onclick="const c=this.nextElementSibling; const o=(c.style.display!=='block'); c.style.display=o?'block':'none'; this.setAttribute('aria-expanded',o)">
+          <span class="badge" style="display:inline-flex;justify-content:center;align-items:center;width:72px;height:72px;border-radius:999px;font-weight:800;font-size:24px;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#072e21;border-color:transparent;">02</span>
+          <div style="font-size:22px;font-weight:800;margin-top:10px">Team Impact and Enablement</div>
+          <div class="small muted" style="margin-top:6px">Read more</div>
+        </div>
+        <div id="why2" style="display:none">
+          <ul class="list">
+            <li>Go to for AI questions, providing quick, actionable help that improves win rates.</li>
+            <li>Build enablement through talk tracks, repeatable workflows, and AI tools adopted by peers.</li>
+            <li>Contribute to team success with slides, docs, and product storytelling for the AI Listening Tour.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tile">
+        <div role="button" tabindex="0" aria-controls="why3" aria-expanded="false" style="text-align:center; cursor:pointer"
+             onclick="const c=this.nextElementSibling; const o=(c.style.display!=='block'); c.style.display=o?'block':'none'; this.setAttribute('aria-expanded',o)">
+          <span class="badge" style="display:inline-flex;justify-content:center;align-items:center;width:72px;height:72px;border-radius:999px;font-weight:800;font-size:24px;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#072e21;border-color:transparent;">03</span>
+          <div style="font-size:22px;font-weight:800;margin-top:10px">Mindset and Collaboration</div>
+          <div class="small muted" style="margin-top:6px">Read more</div>
+        </div>
+        <div id="why3" style="display:none">
+          <ul class="list">
+            <li>Regularly join pitches with clear, concise storytelling.</li>
+            <li>Coachable, curious, and focused on measurable improvements.</li>
+            <li>Known for strong collaboration and communication that accelerates team performance.</li>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
+  <!-- WHY COMMERCIAL -->
+  <section id="isabelle" class="section reveal card pad">
+    <div class="banner parallax"></div>
+    <h2>Why Commercial May Be The Best Fit</h2>
 
+    <p class="muted" style="margin-bottom: 1.5rem;">
+      While I believe Commercial may be the best fit based on my skills and experience, my first priority is contributing to the success of the team and segment that needs me most. I’ve shown I can perform in Mid-Market, Commercial, and Enterprise, and I’m excited to bring that versatility wherever it creates the most impact. Commercial stands out to me as the strongest fit, but my focus remains on driving results and growth for any team I join.
+    </p>
 
-<!-- WHY COMMERCIAL (2 columns x 3 rows, secondary) -->
-<section id="isabelle" class="section reveal card pad">
-  <div class="banner parallax"></div>
-  <h2>Why Commercial May Be The Best Fit</h2>
+    <style>
+      #isabelle .grid { grid-template-columns: repeat(2, 1fr); }
+      @media (max-width: 980px){ #isabelle .grid { grid-template-columns: 1fr; } }
+    </style>
 
-  <p class="muted" style="margin-bottom: 1.5rem;">
-    While I believe Commercial may be the best fit based on my skills and experience, my first priority is contributing to the success of the team and segment that needs me most. I’ve shown I can perform in Mid-Market, Commercial, and Enterprise, and I’m excited to bring that versatility wherever it creates the most impact. Commercial stands out to me as the strongest fit, but my focus remains on driving results and growth for any team I join.
-  </p>
-  
-  <style>
-    #isabelle .grid { grid-template-columns: repeat(2, 1fr); }
-    @media (max-width: 980px){ #isabelle .grid { grid-template-columns: 1fr; } }
-  </style>
+    <div class="grid">
+      <details class="tile">
+        <summary>
+          <strong>Strategic Middle Ground</strong><br />
+          <span class="small muted">Read more</span>
+        </summary>
+        <p class="muted">More strategic than mid-market and less bureaucratic than enterprise; ideal for skill-building with measurable wins and sharpening outbound & account strategy.</p>
+      </details>
 
-  <div class="grid">
-    <details class="tile">
-      <summary>
-        <strong>Strategic Middle Ground</strong><br />
-        <span class="small muted">Read more</span>
-      </summary>
-      <p class="muted">More strategic than mid-market and less bureaucratic than enterprise; ideal for skill-building with measurable wins and sharpening outbound & account strategy.</p>
-    </details>
+      <details class="tile">
+        <summary>
+          <strong>Build for Scale</strong><br />
+          <span class="small muted">Read more</span>
+        </summary>
+        <p class="muted">Commercial is a testing ground for workflows and GTM plays that can extend both up and down market.</p>
+      </details>
 
-    <details class="tile">
-      <summary>
-        <strong>Build for Scale</strong><br />
-        <span class="small muted">Read more</span>
-      </summary>
-      <p class="muted">Commercial is a testing ground for workflows and GTM plays that can extend both up and down market.</p>
-    </details>
+      <details class="tile">
+        <summary>
+          <strong>Prospecting & Strategy</strong><br />
+          <span class="small muted">Read more</span>
+        </summary>
+        <p class="muted">Blend of high-volume generation and nuanced account strategies lets me flex both muscles.</p>
+      </details>
 
-    <details class="tile">
-      <summary>
-        <strong>Prospecting & Strategy</strong><br />
-        <span class="small muted">Read more</span>
-      </summary>
-      <p class="muted">Blend of high-volume generation and nuanced account strategies lets me flex both muscles.</p>
-    </details>
+      <details class="tile">
+        <summary>
+          <strong>Culture & Momentum</strong><br />
+          <span class="small muted">Read more</span>
+        </summary>
+        <p class="muted">Collaborative, high-performance environment where I can experiment and deliver without roadblocks.</p>
+      </details>
 
-    <details class="tile">
-      <summary>
-        <strong>Culture & Momentum</strong><br />
-        <span class="small muted">Read more</span>
-      </summary>
-      <p class="muted">Collaborative, high-performance environment where I can experiment and deliver without roadblocks.</p>
-    </details>
+      <details class="tile">
+        <summary>
+          <strong>Career Runway</strong><br />
+          <span class="small muted">Read more</span>
+        </summary>
+        <p class="muted">Outbound success in commercial strengthens my AE candidacy in any segment.</p>
+      </details>
 
-    <details class="tile">
-      <summary>
-        <strong>Career Runway</strong><br />
-        <span class="small muted">Read more</span>
-      </summary>
-      <p class="muted">Outbound success in commercial strengthens my AE candidacy in any segment.</p>
-    </details>
+      <details class="tile">
+        <summary>
+          <strong>Development & Channel Breadth</strong><br />
+          <span class="small muted">Read more</span>
+        </summary>
+        <p class="muted">Best team for growth: direct customer and new-logo exposure while running every outreach channel—phones, personalized email, Teams/LinkedIn, and events.</p>
+      </details>
+    </div>
+  </section>
 
-    <details class="tile">
-      <summary>
-        <strong>Development & Channel Breadth</strong><br />
-        <span class="small muted">Read more</span>
-      </summary>
-      <p class="muted">Best team for growth: direct customer and new-logo exposure while running every outreach channel—phones, personalized email, Teams/LinkedIn, and events.</p>
-    </details>
-  </div>
-</section>
-
-
-
-
+  <!-- NEW: Home button near footer -->
+  <section class="section card pad" style="text-align:center">
+    <div class="banner" aria-hidden="true"></div>
+    <a href="index.html" class="tile" style="padding:10px 14px; border-radius:12px; font-weight:800; color:#072e21; background:linear-gradient(135deg,var(--brand),var(--brand-2))">← Back to Home</a>
+  </section>
 
   <footer>
     <p>© <span id="year"></span> Jacob Rubis • Internal use only</p>
@@ -401,7 +387,7 @@ addEventListener('scroll',()=>{ const s=scrollY/(document.body.scrollHeight-inne
 const io=new IntersectionObserver((es)=>es.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('show'); }),{threshold:.16});
 document.querySelectorAll('.section, .reveal').forEach(el=>io.observe(el));
 
-// Parallax banners (continuous + sweep)
+// Parallax banners
 const banners=[...document.querySelectorAll('.banner.parallax')];
 function tick(){ const k= innerWidth>960? .38 : .26, vh=innerHeight; banners.forEach(b=>{ const r=b.getBoundingClientRect(); const off=((vh/2)-(r.top+r.height/2))*k*-1; b.style.transform=`translateY(${off}px) scale(1.02) skewX(-6deg)`; b.parentElement.classList.add('show'); }); requestAnimationFrame(tick);} requestAnimationFrame(tick);
 
@@ -423,7 +409,7 @@ if(tilt){
   tilt.addEventListener('mouseleave',()=>tilt.style.transform='perspective(1000px) rotateY(0) rotateX(0)');
 }
 
-// KPI counters when visible (+ support)
+// KPI counters
 const counters=[...document.querySelectorAll('[data-count]')];
 const ioCount=new IntersectionObserver((entries,obs)=>{
   entries.forEach(ent=>{
