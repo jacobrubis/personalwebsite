@@ -7,7 +7,6 @@
 <meta name="description" content="Jacob Rubis — metro-Detroit human who loves people, sports, road trips, and building little tools that make life easier." />
 <meta name="theme-color" content="#0e3a4f" />
 <style>
-/* ===== Brighter ServiceNow-ish theme (friendly & modern) ===== */
 :root{
   --bg:#0e3a4f; --bg2:#0b2f43;
   --panel:#0f415a; --panel2:#0e3a52;
@@ -18,36 +17,23 @@
   --max:1180px;
 }
 *{box-sizing:border-box} html,body{height:100%}
-body{
-  margin:0; color:var(--text);
-  font:16px/1.6 Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-  background:
-    radial-gradient(1200px 600px at 85% -10%, rgba(141,212,255,.18), transparent 60%),
-    radial-gradient(900px 500px at -10% 10%, rgba(124,242,155,.14), transparent 60%),
-    linear-gradient(180deg, var(--bg), var(--bg2));
-  background-size:200% 200%; animation:bgmove 22s linear infinite;
-  overflow-x:hidden;
-}
+body{margin:0; color:var(--text); font:16px/1.6 Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  background:radial-gradient(1200px 600px at 85% -10%, rgba(141,212,255,.18), transparent 60%), radial-gradient(900px 500px at -10% 10%, rgba(124,242,155,.14), transparent 60%), linear-gradient(180deg, var(--bg), var(--bg2)); background-size:200% 200%; animation:bgmove 22s linear infinite; overflow-x:hidden;}
 @keyframes bgmove{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
 .wrap{max-width:var(--max); margin:0 auto; padding:24px}
 a{color:var(--brand); text-decoration:none}
 
-/* Header */
-header{position:sticky; top:0; z-index:60; border-bottom:1px solid var(--border);
-  background:linear-gradient(to bottom, rgba(16,60,82,.92), rgba(16,60,82,.55)); backdrop-filter:saturate(140%) blur(10px)}
+header{position:sticky; top:0; z-index:60; border-bottom:1px solid var(--border); background:linear-gradient(to bottom, rgba(16,60,82,.92), rgba(16,60,82,.55)); backdrop-filter:saturate(140%) blur(10px)}
 .nav{display:flex; align-items:center; justify-content:space-between; gap:16px; max-width:var(--max); margin:0 auto; padding:12px 24px}
 .nav a{padding:10px 12px; border-radius:12px; color:var(--text); transition:transform .18s ease, background .18s ease}
 .nav a:hover{transform:translateY(-2px); background:rgba(255,255,255,.08)}
 .progress{height:3px; background:linear-gradient(90deg,var(--brand),var(--brand-2)); transform-origin:0 50%; transform:scaleX(0)}
 
-/* Sections */
-.section{position:relative; margin:28px 0; transform:scale(.96); opacity:0; filter:blur(4px);
-  transition:transform .7s cubic-bezier(.2,.85,.25,1), opacity .7s ease, filter .7s ease}
+.section{position:relative; margin:28px 0; transform:scale(.96); opacity:0; filter:blur(4px); transition:transform .7s cubic-bezier(.2,.85,.25,1), opacity .7s ease, filter .7s ease}
 .section.in{transform:scale(1); opacity:1; filter:blur(0)}
 .card{background:linear-gradient(180deg,var(--panel),var(--panel2)); border:1px solid var(--border); border-radius:20px; box-shadow:var(--shadow)}
 .pad{padding:26px}
-.banner{position:absolute; left:18px; right:18px; height:110px; top:-30px; border-radius:28px; opacity:.9;
-  background:conic-gradient(from 180deg at 10% 50%, rgba(124,242,155,.16), rgba(141,212,255,.16), rgba(124,242,155,.16)); pointer-events:none}
+.banner{position:absolute; left:18px; right:18px; height:110px; top:-30px; border-radius:28px; opacity:.9; background:conic-gradient(from 180deg at 10% 50%, rgba(124,242,155,.16), rgba(141,212,255,.16), rgba(124,242,155,.16)); pointer-events:none}
 
 h1{font-size:52px; line-height:1.08; margin:8px 0 10px}
 h2{font-size:28px; margin:0 0 10px}
@@ -55,21 +41,11 @@ h2{font-size:28px; margin:0 0 10px}
 .small{font-size:12px; color:var(--muted)}
 .badge{display:inline-flex; align-items:center; gap:8px; font-size:12px; color:var(--text); padding:8px 12px; border:1px solid var(--border); border-radius:999px; background:rgba(255,255,255,.05)}
 
-/* Button (shared gradient CTA) */
-.btn{
-  display:inline-block; padding:12px 16px; border-radius:12px; font-weight:800;
-  color:#072e21; background:linear-gradient(135deg,var(--brand),var(--brand-2));
-  border:0; cursor:pointer
-}
-.btn:focus-visible{outline:2px solid #fff; outline-offset:2px}
-
-/* Grids */
 .grid{display:grid; gap:18px}
 .grid-2{grid-template-columns:1.1fr .9fr}
 .grid-3{grid-template-columns:repeat(3,1fr)}
 @media (max-width:980px){.grid-2,.grid-3{grid-template-columns:1fr}}
 
-/* Tiles + images */
 .tile{position:relative; padding:16px; border:1px solid var(--border); border-radius:16px; overflow:hidden; background:rgba(255,255,255,.05); transition:transform .18s ease, box-shadow .18s ease}
 .tile:hover{transform:translateY(-4px); box-shadow:0 18px 40px rgba(0,0,0,.35)}
 .img{width:100%; height:100%; object-fit:cover; display:block; border-radius:12px; border:1px solid var(--border)}
@@ -82,40 +58,25 @@ h2{font-size:28px; margin:0 0 10px}
 .carousel img.active{opacity:1}
 .carousel .title{position:absolute; left:16px; bottom:16px; background:rgba(0,0,0,.45); padding:8px 12px; border-radius:10px; font-weight:700}
 .carousel .controls{position:absolute; inset:auto 0 12px 0; display:flex; justify-content:center; gap:10px}
-.carousel button.ctrl{border:0; border-radius:12px; padding:8px 12px; font-weight:800; background:linear-gradient(135deg,var(--brand),var(--brand-2)); color:#072e21; cursor:pointer}
-.carousel .dots{position:absolute; left:12px; top:12px; display:flex; gap:6px}
+.carousel button{border:0; border-radius:12px; padding:8px 12px; font-weight:800; background:linear-gradient(135deg,var(--brand),var(--brand-2)); color:#072e21; cursor:pointer}
+.carousel .dots{position:absolute; right:12px; top:12px; display:flex; gap:6px}
 .carousel .dots span{width:9px; height:9px; border-radius:999px; background:rgba(255,255,255,.35)}
 .carousel .dots span.on{background:#fff}
-/* Pause/Play bubble */
-.carousel .pause{
-  position:absolute; right:12px; top:12px; width:36px; height:36px; border-radius:999px;
-  display:grid; place-items:center; background:rgba(0,0,0,.5); color:#fff; border:1px solid rgba(255,255,255,.2); cursor:pointer
-}
-.carousel .pause .icon{font-weight:900; font-size:14px; letter-spacing:-1px}
+.carousel .pause{position:absolute; right:12px; bottom:12px; border:0; border-radius:50%; width:36px; height:36px; background:rgba(0,0,0,.55); color:#fff; font-weight:800; cursor:pointer}
 
 footer{color:var(--muted); text-align:center; padding:40px 0}
-
-/* Reduced motion */
-@media (prefers-reduced-motion:reduce){
-  *{animation:none!important; transition:none!important}
-  .section{transform:none!important; opacity:1!important; filter:none!important}
-}
 </style>
 </head>
 <body>
-<canvas id="particles" style="position:fixed; inset:0; pointer-events:none; z-index:0; opacity:.45"></canvas>
-<div class="spotlight" aria-hidden="true" style="position:fixed; inset:0; pointer-events:none; z-index:1; background:radial-gradient(220px 220px at var(--mx,60%) var(--my,20%), rgba(255,255,255,.10), transparent 60%)"></div>
-
 <header>
   <div class="nav">
     <div class="small">Jacob Rubis</div>
     <nav>
       <a href="#aboutlife">About & Life</a>
       <a href="#cooper">Cooper</a>
-      <a href="#travel">Parks</a>
+      <a href="#travel">National Parks</a>
       <a href="#now">Now</a>
       <a href="promotion.html"><strong>Promotion Case →</strong></a>
-      <a href="https://www.linkedin.com/in/jacobrubis/" target="_blank" rel="noopener">LinkedIn</a>
     </nav>
   </div>
   <div class="progress" id="progress"></div>
@@ -124,102 +85,82 @@ footer{color:var(--muted); text-align:center; padding:40px 0}
 <main class="wrap">
   <!-- HERO -->
   <section class="section card pad">
-    <div class="banner" aria-hidden="true"></div>
     <div class="grid grid-2">
       <div>
         <div class="badge">Metro Detroit • Michigan State University</div>
         <h1>Hey, I’m Jacob Rubis</h1>
-        <p class="muted">Spartan through and through — Marketing & Sales at <strong>Michigan State University</strong>. Love bringing people together, building little tools that help teams, and getting outside whenever I can.</p>
-        <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:8px">
-          <a class="btn" href="https://www.linkedin.com/in/jacobrubis/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+        <p class="muted">Spartan through and through — Marketing & Sales at <strong>Michigan State University</strong>. Love bringing people together, exploring, and staying active.</p>
+        <div style="margin-top:14px; display:flex; gap:12px; flex-wrap:wrap">
+          <a href="https://www.linkedin.com/in/jacobrubis/" target="_blank" class="tile" style="padding:10px 14px; border-radius:12px; font-weight:800; color:#072e21; background:linear-gradient(135deg,var(--brand),var(--brand-2))">LinkedIn</a>
         </div>
       </div>
-      <div class="tile">
-        <img class="img" src="assets/headshot.JPG" alt="Jacob headshot" onerror="this.style.display='none'">
+
+      <!-- Circular brand-ring headshot -->
+      <div style="
+        width:min(340px,38vw);
+        aspect-ratio:1/1;
+        border-radius:50%;
+        border:14px solid #79f2a6;
+        box-shadow:inset 0 12px 40px rgba(0,0,0,.35),0 10px 28px rgba(0,0,0,.25);
+        overflow:hidden;
+        background:#0c1a22;
+        margin-inline:auto;
+      ">
+        <img src="assets/headshot.JPG" alt="Jacob Rubis headshot" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
       </div>
     </div>
   </section>
 
   <!-- ABOUT & LIFE -->
   <section id="aboutlife" class="section card pad">
-    <div class="banner" aria-hidden="true"></div>
     <h2>About me, sports, & hobbies</h2>
     <div class="grid grid-3">
-      <div class="tile">
-        <strong>Michigan State pride</strong>
-        <p class="muted">Earned my Marketing & Sales degree at <strong>MSU</strong> (Go Green!). I interned in sales and learned to love clear, repeatable ways to win together.</p>
-      </div>
-      <div class="tile">
-        <strong>Sports</strong>
-        <p class="muted">Detroit sports fan (Go Lions 🦁). Grew up playing baseball & basketball; still hoop in leagues. Picked up golf during COVID and never looked back.</p>
-      </div>
-      <div class="tile">
-        <strong>Running</strong>
-        <p class="muted">Getting into running for its own sake — new challenge, new routine.</p>
-      </div>
+      <div class="tile"><strong>Michigan State pride</strong><p class="muted">Earned my Marketing & Sales degree at <strong>MSU</strong> (Go Green!). I interned in sales and built a foundation in teamwork and process.</p></div>
+      <div class="tile"><strong>Sports</strong><p class="muted">Detroit sports fan (Go Lions 🦁). Grew up playing baseball & basketball; still hoop in leagues. Picked up golf during COVID and play often.</p></div>
+      <div class="tile"><strong>Hobbies</strong><p class="muted">I love my dog Cooper 🐶, travel often, and I’m challenging myself with running and outdoor adventures.</p></div>
     </div>
   </section>
 
-  <!-- COOPER CAROUSEL -->
+  <!-- COOPER -->
   <section id="cooper" class="section card pad">
-    <div class="banner" aria-hidden="true"></div>
     <h2>Cooper 🐶</h2>
     <div class="carousel" data-id="cooper">
-      <div class="frame" aria-live="polite"></div>
+      <div class="frame"></div>
       <div class="title small"></div>
-      <div class="dots" aria-hidden="true"></div>
-      <button class="pause" type="button" aria-pressed="false" aria-label="Pause slideshow"><span class="icon">❚❚</span></button>
+      <div class="dots"></div>
+      <button class="pause" aria-label="Pause/Play">❚❚</button>
       <div class="controls">
-        <button class="ctrl" data-prev>‹ Prev</button>
-        <button class="ctrl" data-next>Next ›</button>
+        <button data-prev>‹ Prev</button>
+        <button data-next>Next ›</button>
       </div>
     </div>
   </section>
 
   <!-- PARKS -->
   <section id="travel" class="section card pad">
-    <div class="banner" aria-hidden="true"></div>
-    <h2>Road trips & national parks</h2>
+    <h2>National Parks</h2>
     <p class="muted">I’ve driven Michigan ↔ San Diego twice, stopping at parks along the way. <strong>Glacier coming in November!</strong></p>
-
-    <div class="carousel" data-id="parks" style="margin-top:12px">
-      <div class="frame" aria-live="polite"></div>
+    <div class="carousel" data-id="parks">
+      <div class="frame"></div>
       <div class="title small"></div>
-      <div class="dots" aria-hidden="true"></div>
-      <button class="pause" type="button" aria-pressed="false" aria-label="Pause slideshow"><span class="icon">❚❚</span></button>
+      <div class="dots"></div>
+      <button class="pause" aria-label="Pause/Play">❚❚</button>
       <div class="controls">
-        <button class="ctrl" data-prev>‹ Prev</button>
-        <button class="ctrl" data-next>Next ›</button>
+        <button data-prev>‹ Prev</button>
+        <button data-next>Next ›</button>
       </div>
     </div>
-
     <div class="tile" style="margin-top:14px">
       <strong>National Parks I’ve visited: <span id="parksCount">0</span></strong>
       <div id="parksBadges" style="display:flex; gap:8px; flex-wrap:wrap; margin-top:8px"></div>
     </div>
   </section>
 
-  <!-- NOW -->
-  <section id="now" class="section card pad">
-    <div class="banner" aria-hidden="true"></div>
-    <h2>What I’m learning & building</h2>
-    <div class="grid grid-2">
-      <div class="tile">
-        <strong>AI projects for everyday work</strong>
-        <p class="muted">Little tools that make outreach, prep, and coaching easier (briefs, follow-ups, roleplays, etc.).</p>
-        <a href="promotion.html#projects">Peek at some projects →</a>
-      </div>
-      <div class="tile">
-        <strong>MIT course this fall</strong>
-        <p class="muted"><em>Applied Agentic AI for Organizational Transformation</em> — excited to bring the learning back to the team.</p>
-      </div>
-    </div>
-  </section>
-
   <section class="section card pad" style="text-align:center">
     <div class="banner" aria-hidden="true"></div>
-    <a class="btn" href="promotion.html">View Promotion Case</a>
+      <a href="promotion.html" class="tile" style="padding:10px 14px; border-radius:12px; font-weight:800; color:#072e21; background:linear-gradient(135deg,var(--brand),var(--brand-2))">View Promotion Case</a>
   </section>
+
 
   <footer>
     <p class="small">© <span id="year"></span> Jacob Rubis</p>
@@ -231,74 +172,76 @@ footer{color:var(--muted); text-align:center; padding:40px 0}
 const progress=document.getElementById('progress');
 addEventListener('scroll',()=>{ const s=scrollY/(document.body.scrollHeight-innerHeight); progress.style.transform=`scaleX(${Math.max(0,Math.min(1,s))})`; });
 
-/* Section grow/reveal */
+/* Section reveal */
 const io=new IntersectionObserver(es=>{ es.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('in'); }); },{threshold:.18});
 document.querySelectorAll('.section').forEach(s=>io.observe(s));
 
-/* Spotlight cursor */
-const spot=document.querySelector('.spotlight');
-document.addEventListener('mousemove',(e)=>{ spot.style.setProperty('--mx',(e.clientX/window.innerWidth*100)+'%'); spot.style.setProperty('--my',(e.clientY/window.innerHeight*100)+'%'); });
-
-/* Subtle particles */
-const C=document.getElementById('particles'),X=C.getContext('2d'); let W,H,P=[];
-function rs(){W=C.width=innerWidth; H=C.height=innerHeight; const n=Math.min(120,Math.floor(W*H/19000));
-  P=[...Array(n)].map(()=>({x:Math.random()*W,y:Math.random()*H,r:Math.random()*2+0.6,dx:(Math.random()-.5)*.25,dy:(Math.random()-.5)*.25,a:Math.random()*.6+.25}))}
-function dr(){X.clearRect(0,0,W,H); for(const p of P){p.x+=p.dx; p.y+=p.dy; if(p.x<0||p.x>W)p.dx*=-1; if(p.y<0||p.y>H)p.dy*=-1; X.beginPath(); const g=X.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r*3); g.addColorStop(0,'rgba(124,242,155,'+p.a+')'); g.addColorStop(1,'rgba(124,242,155,0)'); X.fillStyle=g; X.arc(p.x,p.y,p.r*3,0,Math.PI*2); X.fill(); } requestAnimationFrame(dr) }
-addEventListener('resize',rs); rs(); dr();
 document.getElementById('year').textContent=(new Date).getFullYear();
 
-/* -------- Carousels (clickable + 5s autoplay + pause/play) -------- */
+/* Carousel (fixed pause + order + no skipping) */
 function makeCarousel(root, items, intervalMs=5000){
   const frame=root.querySelector('.frame');
   const title=root.querySelector('.title');
   const dots=root.querySelector('.dots');
-  const pauseBtn=root.querySelector('.pause .icon').parentElement;
-  const pauseIcon=root.querySelector('.pause .icon');
-  let idx=0, timer, isPaused=false;
+  const pauseBtn=root.querySelector('.pause');
 
-  // build images
+  let idx=0;
+  let timer=null;
+  let playing=true;
+
+  // build slides/dots
   items.forEach((it,i)=>{
     const img=document.createElement('img');
-    img.src=it.src; img.alt=it.title; if(i===0) img.classList.add('active');
-    img.addEventListener('click',()=>go((idx+1)%items.length)); // click to next
+    img.src=it.src;
+    img.alt=it.title || 'photo';
+    img.loading='lazy';
+    if(i===0) img.classList.add('active');
     frame.appendChild(img);
-    const dot=document.createElement('span'); if(i===0) dot.classList.add('on'); dots.appendChild(dot);
+
+    const dot=document.createElement('span');
+    if(i===0) dot.classList.add('on');
+    dot.addEventListener('click',()=>go(i));
+    dots.appendChild(dot);
   });
+
   const imgs=[...frame.querySelectorAll('img')];
   const dotEls=[...dots.children];
 
-  function sync(){ imgs.forEach((im,i)=>im.classList.toggle('active',i===idx));
-                  dotEls.forEach((d,i)=>d.classList.toggle('on',i===idx));
-                  title.textContent=items[idx].title; }
-
-  function go(n){ idx=n; sync(); restart(); }
-  function next(){ go((idx+1)%items.length); }
-  function prev(){ go((idx-1+items.length)%items.length); }
-
-  function start(){ if(!isPaused) timer=setInterval(next, intervalMs); }
-  function stop(){ clearInterval(timer); }
-
-  function togglePause(){
-    isPaused=!isPaused;
-    pauseBtn.setAttribute('aria-pressed', String(isPaused));
-    pauseBtn.setAttribute('aria-label', isPaused ? 'Play slideshow' : 'Pause slideshow');
-    pauseIcon.textContent = isPaused ? '▶' : '❚❚';
-    stop(); if(!isPaused) start();
+  function sync(){
+    imgs.forEach((im,i)=>im.classList.toggle('active', i===idx));
+    dotEls.forEach((d,i)=>d.classList.toggle('on', i===idx));
+    title.textContent = items[idx]?.title || '';
   }
-  function restart(){ stop(); if(!isPaused) start(); }
+
+  function start(){
+    if(timer!==null) return;             // prevent multiple intervals
+    timer=setInterval(next, intervalMs);
+  }
+  function stop(){
+    if(timer!==null){ clearInterval(timer); timer=null; }
+  }
+
+  function go(n){
+    idx=(n+items.length)%items.length;
+    sync();
+    if(playing){ stop(); start(); }      // restart only if playing
+  }
+  function next(){ go(idx+1); }
+  function prev(){ go(idx-1); }
 
   root.querySelector('[data-next]').addEventListener('click', next);
   root.querySelector('[data-prev]').addEventListener('click', prev);
-  pauseBtn.addEventListener('click', togglePause);
 
-  dotEls.forEach((d,i)=>d.addEventListener('click',()=>go(i)));
-  root.addEventListener('mouseenter', stop);
-  root.addEventListener('mouseleave', ()=>!isPaused && start());
+  pauseBtn.addEventListener('click',()=>{
+    playing=!playing;
+    if(playing){ pauseBtn.textContent='❚❚'; start(); }
+    else { pauseBtn.textContent='▶'; stop(); }
+  });
 
   sync(); start();
 }
 
-/* Provide your images here (assets folder). You can add more!) */
+/* Use the files you actually uploaded */
 const carousels = {
   cooper: [
     {src:'assets/Cooper1.JPG'},
@@ -309,28 +252,35 @@ const carousels = {
     {src:'assets/Cooper6.JPG'}
   ],
   parks: [
-    {src:'assets/Badlands.JPG', title:'Badlands National Park'},
-    {src:'assets/Arches.JPG', title:'Arches National Park'},
-    {src:'assets/Bryce.JPG', title:'Bryce Canyon National Park'},
-    {src:'assets/GrandTeton.JPG', title:'Grand Teton National Park'},
+    {src:'assets/Badlands.JPG',    title:'Badlands National Park'},
+    {src:'assets/Arches.JPG',      title:'Arches National Park'},
+    {src:'assets/Bryce.JPG',       title:'Bryce Canyon National Park'},
+    {src:'assets/GrandTeton.JPG',  title:'Grand Teton National Park'},
     {src:'assets/GrandTeton2.JPG', title:'Grand Teton National Park'},
-    {src:'assets/Yosemite.JPG', title:'Yosemite National Park'}
+    {src:'assets/Yosemite.JPG',    title:'Yosemite National Park'}
   ]
 };
 
-/* Initialize carousels */
 document.querySelectorAll('.carousel').forEach(el=>{
   const id=el.getAttribute('data-id');
   const items=carousels[id] || [];
-  if(items.length) makeCarousel(el, items, 5000); // 5s
+  if(items.length) makeCarousel(el, items, 5000);
 });
 
-/* Badges + counter for parks */
-const parksList = carousels.parks.map(p=>p.title.split(' National Park')[0]);
-const wrap=document.getElementById('parksBadges');
-if(wrap){
-  parksList.forEach(n=>{ const b=document.createElement('span'); b.className='badge'; b.textContent=n; wrap.appendChild(b); });
-  document.getElementById('parksCount').textContent=parksList.length;
+/* Badges: show ALL 9 unique parks (even if fewer images) */
+const allParks = [
+  'Badlands','Great Basin','Rocky Mountain','Zion',
+  'Arches','Grand Canyon','Grand Teton','Yosemite','Joshua Tree'
+];
+const badgesWrap=document.getElementById('parksBadges');
+if(badgesWrap){
+  allParks.forEach(n=>{
+    const b=document.createElement('span');
+    b.className='badge';
+    b.textContent=n;
+    badgesWrap.appendChild(b);
+  });
+  document.getElementById('parksCount').textContent=allParks.length;
 }
 </script>
 </body>
