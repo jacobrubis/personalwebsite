@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Jacob Rubis — Hello!</title>
-<meta name="description" content="Jacob Rubis — From Michigan,love sports, getting outside, and staying active" />
+<meta name="description" content="Jacob Rubis — From Michigan, love sports, getting outside, and staying active" />
 <meta name="theme-color" content="#0e3a4f" />
 <style>
 :root{
@@ -35,7 +35,7 @@ header{position:sticky; top:0; z-index:60; border-bottom:1px solid var(--border)
 .pad{padding:26px}
 .banner{position:absolute; left:18px; right:18px; height:110px; top:-30px; border-radius:28px; opacity:.9; background:conic-gradient(from 180deg at 10% 50%, rgba(124,242,155,.16), rgba(141,212,255,.16), rgba(124,242,155,.16)); pointer-events:none}
 
-h1{font-size:52px; line-height:1.08; margin:8px 0 10px}
+h1{font-size:52px; line-height:1.08; margin:8px 0 4px}
 h2{font-size:28px; margin:0 0 10px}
 .muted{color:var(--muted)}
 .small{font-size:12px; color:var(--muted)}
@@ -72,9 +72,9 @@ footer{color:var(--muted); text-align:center; padding:40px 0}
   <div class="nav">
     <div class="small">Jacob Rubis</div>
     <nav>
-      <a href="#aboutlife">About & Life</a>
-      <a href="#cooper">Cooper</a>
+      <a href="#aboutlife">About Me</a>
       <a href="#travel">National Parks</a>
+      <a href="#cooper">Cooper</a>
       <a href="#now">Now</a>
       <a href="promotion.html"><strong>Promotion Case →</strong></a>
     </nav>
@@ -89,7 +89,10 @@ footer{color:var(--muted); text-align:center; padding:40px 0}
       <div>
         <div class="badge">Metro Detroit • Michigan State University</div>
         <h1>Hey, I’m Jacob Rubis</h1>
-        <p class="muted">Spartan through and through — Marketing & Sales at <strong>Michigan State University</strong>. Love playing sports, exploring, and staying active.</p>
+        <div class="small" style="margin:2px 0 10px; opacity:.9">Inbound SDR @ ServiceNow</div>
+        <p class="muted">
+          I earned my <strong>Marketing &amp; Sales</strong> degree at <strong>Michigan State University</strong> (Spartan through and through). I love playing sports, exploring, and staying active.
+        </p>
         <div style="margin-top:14px; display:flex; gap:12px; flex-wrap:wrap">
           <a href="https://www.linkedin.com/in/jacobrubis/" target="_blank" class="tile" style="padding:10px 14px; border-radius:12px; font-weight:800; color:#072e21; background:linear-gradient(135deg,var(--brand),var(--brand-2))">LinkedIn</a>
         </div>
@@ -111,32 +114,17 @@ footer{color:var(--muted); text-align:center; padding:40px 0}
     </div>
   </section>
 
-  <!-- ABOUT & LIFE -->
+  <!-- ABOUT -->
   <section id="aboutlife" class="section card pad">
-    <h2>About me, sports, & hobbies</h2>
+    <h2>About Me</h2>
     <div class="grid grid-3">
-      <div class="tile"><strong>Michigan State pride</strong><p class="muted">Earned my Marketing & Sales degree at <strong>MSU</strong> (Go Green!). I interned in sales and built a foundation in teamwork and process.</p></div>
-      <div class="tile"><strong>Sports</strong><p class="muted">Detroit sports fan (Go Lions 🦁). Grew up playing baseball & basketball; still hoop in leagues. Picked up golf during COVID and play often.</p></div>
+      <div class="tile"><strong>Michigan State Pride</strong><p class="muted">Earned my Marketing &amp; Sales degree at <strong>MSU</strong> (Go Green!). I interned in sales and built a foundation in teamwork and process.</p></div>
+      <div class="tile"><strong>Sports</strong><p class="muted">Detroit sports fan (Go Lions 🦁). Grew up playing baseball &amp; basketball; still hoop in leagues. Picked up golf during COVID and play often.</p></div>
       <div class="tile"><strong>Hobbies</strong><p class="muted">I love my dog Cooper 🐶, travel often, and I’m challenging myself with running and outdoor adventures.</p></div>
     </div>
   </section>
 
-  <!-- COOPER -->
-  <section id="cooper" class="section card pad">
-    <h2>Cooper 🐶</h2>
-    <div class="carousel" data-id="cooper">
-      <div class="frame"></div>
-      <div class="title small"></div>
-      <div class="dots"></div>
-      <button class="pause" aria-label="Pause/Play">❚❚</button>
-      <div class="controls">
-        <button data-prev>‹ Prev</button>
-        <button data-next>Next ›</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- PARKS -->
+  <!-- PARKS (moved above Cooper) -->
   <section id="travel" class="section card pad">
     <h2>National Parks</h2>
     <p class="muted">I’ve driven Michigan ↔ San Diego twice, stopping at parks along the way. <strong>Glacier coming in November!</strong></p>
@@ -156,11 +144,25 @@ footer{color:var(--muted); text-align:center; padding:40px 0}
     </div>
   </section>
 
+  <!-- COOPER (now second) -->
+  <section id="cooper" class="section card pad">
+    <h2>Cooper 🐶</h2>
+    <div class="carousel" data-id="cooper">
+      <div class="frame"></div>
+      <div class="title small"></div>
+      <div class="dots"></div>
+      <button class="pause" aria-label="Pause/Play">❚❚</button>
+      <div class="controls">
+        <button data-prev>‹ Prev</button>
+        <button data-next>Next ›</button>
+      </div>
+    </div>
+  </section>
+
   <section class="section card pad" style="text-align:center">
     <div class="banner" aria-hidden="true"></div>
       <a href="promotion.html" class="tile" style="padding:10px 14px; border-radius:12px; font-weight:800; color:#072e21; background:linear-gradient(135deg,var(--brand),var(--brand-2))">View Promotion Case</a>
   </section>
-
 
   <footer>
     <p class="small">© <span id="year"></span> Jacob Rubis</p>
@@ -178,7 +180,7 @@ document.querySelectorAll('.section').forEach(s=>io.observe(s));
 
 document.getElementById('year').textContent=(new Date).getFullYear();
 
-/* Carousel (fixed pause + order + no skipping) */
+/* Carousel */
 function makeCarousel(root, items, intervalMs=5000){
   const frame=root.querySelector('.frame');
   const title=root.querySelector('.title');
@@ -189,15 +191,11 @@ function makeCarousel(root, items, intervalMs=5000){
   let timer=null;
   let playing=true;
 
-  // build slides/dots
   items.forEach((it,i)=>{
     const img=document.createElement('img');
-    img.src=it.src;
-    img.alt=it.title || 'photo';
-    img.loading='lazy';
+    img.src=it.src; img.alt=it.title || 'photo'; img.loading='lazy';
     if(i===0) img.classList.add('active');
     frame.appendChild(img);
-
     const dot=document.createElement('span');
     if(i===0) dot.classList.add('on');
     dot.addEventListener('click',()=>go(i));
@@ -207,76 +205,50 @@ function makeCarousel(root, items, intervalMs=5000){
   const imgs=[...frame.querySelectorAll('img')];
   const dotEls=[...dots.children];
 
-  function sync(){
-    imgs.forEach((im,i)=>im.classList.toggle('active', i===idx));
-    dotEls.forEach((d,i)=>d.classList.toggle('on', i===idx));
-    title.textContent = items[idx]?.title || '';
-  }
-
-  function start(){
-    if(timer!==null) return;             // prevent multiple intervals
-    timer=setInterval(next, intervalMs);
-  }
-  function stop(){
-    if(timer!==null){ clearInterval(timer); timer=null; }
-  }
-
-  function go(n){
-    idx=(n+items.length)%items.length;
-    sync();
-    if(playing){ stop(); start(); }      // restart only if playing
-  }
+  function sync(){ imgs.forEach((im,i)=>im.classList.toggle('active',i===idx));
+                   dotEls.forEach((d,i)=>d.classList.toggle('on',i===idx));
+                   title.textContent=items[idx]?.title||''; }
+  function start(){ if(timer!==null) return; timer=setInterval(next,intervalMs); }
+  function stop(){ if(timer!==null){ clearInterval(timer); timer=null; } }
+  function go(n){ idx=(n+items.length)%items.length; sync(); if(playing){ stop(); start(); } }
   function next(){ go(idx+1); }
   function prev(){ go(idx-1); }
 
   root.querySelector('[data-next]').addEventListener('click', next);
   root.querySelector('[data-prev]').addEventListener('click', prev);
-
-  pauseBtn.addEventListener('click',()=>{
-    playing=!playing;
-    if(playing){ pauseBtn.textContent='❚❚'; start(); }
-    else { pauseBtn.textContent='▶'; stop(); }
-  });
+  pauseBtn.addEventListener('click',()=>{ playing=!playing; if(playing){ pauseBtn.textContent='❚❚'; start(); } else { pauseBtn.textContent='▶'; stop(); } });
 
   sync(); start();
 }
 
-/* Use the files you actually uploaded */
+/* Images you uploaded */
 const carousels = {
+  parks: [
+    {src:'assets/Badlands.JPG',    title:'Badlands National Park'},
+    {src:'assets/Yosemite1.JPG',   title:'Yosemite National Park'},
+    {src:'assets/Bryce.JPG',       title:'Bryce Canyon National Park'},
+    {src:'assets/GrandTeton.JPG',  title:'Grand Teton National Park'},
+    {src:'assets/GrandTeton2.JPG', title:'Grand Teton National Park'}
+  ],
   cooper: [
     {src:'assets/Cooper1.JPG'},
     {src:'assets/Cooper2.JPG'},
     {src:'assets/Cooper3.JPG'},
-    {src:'assets/Cooper4.JPG'},
-  ],
-  parks: [
-    {src:'assets/Badlands.JPG',    title:'Badlands National Park'},
-    {src:'assets/Yosemite1.JPG',      title:'Yosemite National Park'},
-    {src:'assets/Bryce.JPG',       title:'Bryce Canyon National Park'},
-    {src:'assets/GrandTeton.JPG',  title:'Grand Teton National Park'},
-    {src:'assets/GrandTeton2.JPG', title:'Grand Teton National Park'},
+    {src:'assets/Cooper4.JPG'}
   ]
 };
 
 document.querySelectorAll('.carousel').forEach(el=>{
   const id=el.getAttribute('data-id');
-  const items=carousels[id] || [];
+  const items=carousels[id]||[];
   if(items.length) makeCarousel(el, items, 5000);
 });
 
 /* Badges: show ALL 9 unique parks (even if fewer images) */
-const allParks = [
-  'Badlands','Great Basin','Rocky Mountain','Zion',
-  'Arches','Grand Canyon','Grand Teton','Yosemite','Joshua Tree'
-];
+const allParks=['Badlands','Great Basin','Rocky Mountain','Zion','Arches','Grand Canyon','Grand Teton','Yosemite','Joshua Tree'];
 const badgesWrap=document.getElementById('parksBadges');
 if(badgesWrap){
-  allParks.forEach(n=>{
-    const b=document.createElement('span');
-    b.className='badge';
-    b.textContent=n;
-    badgesWrap.appendChild(b);
-  });
+  allParks.forEach(n=>{ const b=document.createElement('span'); b.className='badge'; b.textContent=n; badgesWrap.appendChild(b); });
   document.getElementById('parksCount').textContent=allParks.length;
 }
 </script>
